@@ -35,5 +35,11 @@ namespace Tester
 
             Assert.Equal("Björn Strömberg Per Gunnar", name);
         }
+
+        [Fact]
+        public void TestaEmptyString()
+        {
+            Assert.Equal(string.Empty, "");
+        }
     }
 }
