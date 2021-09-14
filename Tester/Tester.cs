@@ -41,5 +41,14 @@ namespace Tester
         {
             Assert.Equal(string.Empty, "");
         }
+
+
+        [Fact]
+        public void Foo()
+        {
+            char letter = 'A';
+
+            int number = (int) letter;
+        }
     }
 }
