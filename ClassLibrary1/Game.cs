@@ -8,13 +8,16 @@ namespace ClassLibrary1
 {
     public class Game
     {
+        private int _score;
+
         public void Roll(int pins)
         {
+            _score += pins;
         }
 
         public int Score()
         {
-            return 0;
+            return _score;
         }
     }
 }
