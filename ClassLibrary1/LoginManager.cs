@@ -22,10 +22,8 @@ namespace CoreSolution
 
         public bool DoesUserWithPasswordExist(string username, string password)
         {
-            if (_username == username && _password == password)
-                return true;
-            else
-                return false;
+            bool userExists = _username == username && _password == password;
+            return userExists;
         }
     }
 }

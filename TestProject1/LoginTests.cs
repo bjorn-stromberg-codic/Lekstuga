@@ -9,14 +9,21 @@ using Xunit;
 
 namespace Tests
 {
+    // TODO testa registrering av flera användare
+    // TODO testa att man kan logga in
+    // TODO samma kod i varje test för att skapa login manager
     public class LoginTests
     {
         [Fact]
         private void TestRegisterUser()
         {
             LoginManager loginManager = new LoginManager();
+            
+            Assert.False(loginManager.DoesUserWithPasswordExist("user", "pwd"));
 
             loginManager.RegisterNewUser("user", "pwd");
+
+            Assert.True(loginManager.DoesUserWithPasswordExist("user", "pwd"));
         }
 
         [Fact]
