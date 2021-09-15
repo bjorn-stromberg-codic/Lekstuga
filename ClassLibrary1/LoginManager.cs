@@ -12,5 +12,10 @@ namespace CoreSolution
         {
 
         }
+
+        public bool DoesUserWithPasswordExist(string username, string password)
+        {
+            return false;
+        }
     }
 }

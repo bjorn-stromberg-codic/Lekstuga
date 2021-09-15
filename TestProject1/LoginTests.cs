@@ -18,5 +18,17 @@ namespace Tests
 
             loginManager.RegisterNewUser("user", "pwd");
         }
+
+        [Fact]
+        private void TestCantRegisterSameUserTwice()
+        {
+            LoginManager loginManager = new LoginManager();
+
+            loginManager.RegisterNewUser("user", "pwd");
+            loginManager.RegisterNewUser("user", "other_pwd");
+
+            Assert.True(loginManager.DoesUserWithPasswordExist("user", "pwd"));
+            Assert.False(loginManager.DoesUserWithPasswordExist("user", "other_pwd"));
+        }
     }
 }
